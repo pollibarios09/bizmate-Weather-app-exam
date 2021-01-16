@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\City;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Coordinate extends Model
 {
@@ -14,4 +15,10 @@ class Coordinate extends Model
         'long',
         'city_id',
     ];
+
+
+    public function city()
+    {
+        return $this->hasOne(City::class);
+    }
 }
