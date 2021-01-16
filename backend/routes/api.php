@@ -17,3 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+Route::get('cities', 'CityController@index');
+Route::get('cities/{city}', 'CityController@show');
+
+Route::get('cities/{city}/weather', 'WeatherController@show');
+
+
