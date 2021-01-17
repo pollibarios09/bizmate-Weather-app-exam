@@ -32,7 +32,7 @@ class WeatherRequest extends ServiceRequest
             'appid' => env('OPENWEATHERMAP_APP_ID'),
             'id' => $city->weather_id,
             'units' => 'metric',
-            'cnt' => 5
+            'cnt' => 3
         ];
 
         $response = $this->requestGet('?'. Arr::query($request))->get();
