@@ -10,7 +10,7 @@
         <v-list-item-title class="headline mb-1">
           {{name}}
         </v-list-item-title>
-        <v-list-item-subtitle>{{location.address}}, {{location.city}}, {{location.country}}</v-list-item-subtitle>
+        <v-list-item-subtitle>{{location.address ? location.address + ',' : '' }} {{location.city ? location.city + ',' : '' }} {{location.country}}</v-list-item-subtitle>
       </v-list-item-content>
 
       <v-list-item-avatar
