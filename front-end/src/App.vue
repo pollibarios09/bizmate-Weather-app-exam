@@ -2,7 +2,7 @@
   <v-app>
     <v-main>
       <SearchBar/>
-      <router-view></router-view>
+      <router-view :key="$route.path"></router-view>
     </v-main>
   </v-app>
 </template>
