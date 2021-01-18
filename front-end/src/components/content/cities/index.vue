@@ -50,7 +50,7 @@ export default {
     computed: {
         ...mapGetters(['cityDetails'])
     },
-    mounted () {
+    created () {
         this.fetchCity()
     }
 }

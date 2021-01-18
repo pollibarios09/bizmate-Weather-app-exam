@@ -15,7 +15,7 @@
                 color="white"
                 class="align-center"
                 >
-                <v-list-item-title class="headline mb-1 d-flex">
+                    <v-list-item-title class="headline mb-1 d-flex">
 
                         <div>
                             <v-img 
@@ -25,13 +25,13 @@
                             </v-img>
                         </div>
                         <v-list-item>{{parseWeather(details.weather)}}</v-list-item>
-                </v-list-item-title>
-                <v-list-item-subtitle>
+                    </v-list-item-title>
+                    <v-list-item-subtitle>
 
                         <v-list-item><h1>{{parseTemperature(details.main)}}</h1></v-list-item>
                         <v-list-item>{{parseDate(details.dt_txt)}}</v-list-item>
 
-                </v-list-item-subtitle>
+                    </v-list-item-subtitle>
                 </v-card>
             </v-col>
         </v-row>
@@ -65,7 +65,6 @@ export default {
             return `http://openweathermap.org/img/wn/${weather[0].icon}@2x.png`
         },
         parseWeather (weather) {
-            console.log(weather[0]);
             return `${weather[0].description.toUpperCase()}`
         },
         parseDate (dateTime) {
